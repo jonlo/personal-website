@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Header } from './header';
 import { About } from './about';
 import { Skills } from './skills';
+import { Experience } from './experience';
 import resume from '../data/resume.json';
 export class App extends Component {
 
@@ -11,6 +12,7 @@ export class App extends Component {
     this.state = { imageFile: '' };
     this.handler = this.handler.bind(this)
     this.imageViewer = React.createRef();
+    console.log(resume.experience);
   }
 
   handler(imageFile) {
@@ -23,6 +25,8 @@ export class App extends Component {
         <Header></Header>
         <About></About>
         <Skills skills={resume.skills} ></Skills>
+        <Experience experience={resume.experience}></Experience>
+
       </div >
     );
   }
