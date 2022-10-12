@@ -1,0 +1,57 @@
+{
+	"skills": [
+		{
+			"name": "JavaScript",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Docker",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "NodeJS",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Three.js",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "C#",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Unity3d",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Java",
+			"level": "Expert",
+			"icon": ""
+		}
+	],
+	"experience":[
+		{
+			"company": "Tecnalia Research & innovation",
+			"position": "Senior software engineer",
+			"from": "2019",
+			"to": "Present",
+			"tasks": [
+				"WebXR application development (html , css, three.js, jtest, webpack)",
+				"Packages development (npm)",
+				"Nodejs backend development (express, strapi, socket.IO ...)",
+				"Apps containerization using docker technologies",
+				"JAVA backend development (maven..)",
+				"Virtual reality technologies",
+				"Continuous integration under Gitlab CI",
+				"Deploy under azure technologies ( app service, vm ...)"
+			]
+		}
+	]
+}
