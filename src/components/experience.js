@@ -15,7 +15,10 @@ export class Experience extends Component {
 				<ul>
 					{this.props.experience.map((experience, index) => {
 						return <li key={index}>
-							<h4>{experience.company}</h4>
+							<div className='experience-header'>
+								<h4>{experience.company}</h4>
+								<h5><i>{experience.from} - {experience.to} </i></h5>
+							</div>
 							<p> {experience.position}</p>
 						</li>;
 					})}

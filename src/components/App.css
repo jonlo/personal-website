@@ -10,7 +10,7 @@ body {
   color: rgb(53, 50, 65);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   margin-left: 20rem;
   margin-right: 20rem;
   margin-top: 4rem;
