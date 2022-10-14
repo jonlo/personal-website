@@ -52,6 +52,54 @@
 				"Continuous integration under Gitlab CI",
 				"Deploy under azure technologies ( app service, vm ...)"
 			]
+		},
+		{
+			"company": "LUDUS - Realidad Virtual para industria y servicios de emergencia",
+			"position": "Co founder &  Lead developer",
+			"from": "2016",
+			"to": "2020",
+			"tasks": [
+				"Lead developer, working as engineer manager in a team up to 8 devs",
+				"Framework architecture design and development for virtual reality applications in unity3d focused on emergency environments and company security",
+				"Nodejs backend development (express)",
+				"Deploy apps in AWS",
+				"Agile & scrum",
+				"Project management and project time estimations",
+				"Team and resource management"
+			]
+		},
+		{
+			"company": "Pulsar Concept",
+			"position": "Co founder &  Lead developer",
+			"from": "2011",
+			"to": "2016",
+			"tasks": [
+				"Mobile games and apps development for iOS and Android  under Objective-C native and C# with Xamarin and Unity 3d",
+				"Project management and project time estimations",
+				"Team and resource management",
+				"Agile  & scrum",
+				"Professor in Cebanc (iOS mobile apps development course)",
+				"Professor in IFPS Tartanga (game development under Unity3d course)"
+			]
+		},
+		{
+			"company": "IDEATECA",
+			"position": "iOS developer",
+			"from": "2010",
+			"to": "2011",
+			"tasks": [
+				"Mobile game deveolpment for iOS (iphone & ipad)",
+				"Objective-C"
+			]
+		},
+		{
+			"company": "Campusdeportivo",
+			"position": ".Net Developer junior",
+			"from": "2006",
+			"to": "2007",
+			"tasks": [
+				"Web development C# & asp .NET"
+			]
 		}
 	]
 }

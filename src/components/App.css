@@ -7,7 +7,7 @@ html {
 body {
   /* background-color: #686de0; */
   font-family: "Source Serif Pro", "Times New Roman", serif;
-  color: rgb(53, 50, 65);
+  color: rgb(63, 63, 63);
   display: flex;
   flex-direction: column;
   overflow: visible;
