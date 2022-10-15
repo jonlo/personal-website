@@ -1,0 +1,34 @@
+.Skills {
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+}
+
+.Networking ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+	margin-bottom: 20px;
+	align-items: left;
+	justify-content: left;
+
+}
+
+.Networking li {
+	padding:1rem;
+}
+
+.Networking li:hover {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+}
+
+.Networking li:active {
+	background-color: white;
+	border-radius: 1rem;
+	box-shadow: inset rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+}

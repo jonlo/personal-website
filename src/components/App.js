@@ -4,6 +4,7 @@ import { Header } from './header';
 import { About } from './about';
 import { Skills } from './skills';
 import { Experience } from './experience';
+import { Networking } from './networking';
 import resume from '../data/resume.json';
 export class App extends Component {
 
@@ -23,6 +24,7 @@ export class App extends Component {
     return (
       <div className="App">
         <Header></Header>
+        <Networking networks={resume.networks}></Networking>
         <About></About>
         <Skills skills={resume.skills} ></Skills>
         <Experience experience={resume.experience}></Experience>

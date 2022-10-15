@@ -1,4 +1,21 @@
 {
+	"networks":[
+		{
+			"name":"gihtub",
+			"url":"https://github.com/jonlo",
+			"icon":"fa-brands fa-github"
+		},
+		{
+			"name":"linkedin",
+			"url":"https://www.linkedin.com/in/jonldg/",
+			"icon":"fa-brands fa-linkedin"
+		},
+		{
+			"name":"stack overflow",
+			"url":"https://stackoverflow.com/users/460453/jonloo",
+			"icon":"fa-brands fa-stack-overflow"
+		}
+	],
 	"skills": [
 		{
 			"name": "JavaScript",

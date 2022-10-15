@@ -65,6 +65,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 25px;
+
 }
 
 .Task-list li{
@@ -72,6 +73,7 @@
   font-style: black;
   font-size: 1rem;
   padding: 5px;
+  margin:5px;
   width: 300px;
   box-shadow:none;
 }
