@@ -2,9 +2,9 @@ import './App.css';
 import React, { Component } from 'react';
 import { Header } from './header';
 import { About } from './about';
-import { Skills } from './skills';
+
 import { Experience } from './experience';
-import { Networking } from './networking';
+
 import resume from '../data/resume.json';
 export class App extends Component {
 
@@ -23,10 +23,8 @@ export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header></Header>
-        <Networking networks={resume.networks}></Networking>
-        <About></About>
-        <Skills skills={resume.skills} ></Skills>
+        <Header resume={resume}></Header>
+        <About resume={resume}></About>
         <Experience experience={resume.experience}></Experience>
 
       </div >

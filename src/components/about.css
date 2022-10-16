@@ -7,6 +7,7 @@
 	text-align: justify;
 	font-size: 1.5rem;
 	top: 0;
+	padding: 1rem;
 	max-width: 1000px;
 	font-size-adjust: 0.5;
 	line-height: calc(1ex / 0.32);

@@ -1,5 +1,6 @@
 import './about.css';
 import React, { Component } from 'react';
+import { Skills } from './skills';
 
 export class About extends Component {
 
@@ -12,7 +13,9 @@ export class About extends Component {
 					From mobile devices (IOS,xamarin), stand-alone developments (unity3d) to web technologies (nodejs, java, three js, webpack, maven....) i have work in many projects with different tech stacks.
 					I am a team player & detail-oriented with strong object oriented programming knowledge and I like to apply clean code principles to my developments.
 				</p>
+				<Skills skills={this.props.resume.skills} ></Skills>
 			</div>
+
 		);
 	}
 }
