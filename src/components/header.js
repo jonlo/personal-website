@@ -1,8 +1,18 @@
 import './header.css';
-import {HeaderToggle} from './headerToggle';
+import { HeaderToggle } from './headerToggle';
 import React, { Component } from 'react';
 import { Networking } from './networking';
 export class Header extends Component {
+
+	constructor(props) {
+		super(props);
+		this.state = { visiblePanel: 'About' };
+	}
+
+	setPanel(panel) {
+		this.setState({ visiblePanel: panel });
+		this.props.setPanel(panel);
+	}
 
 	render() {
 		return (
@@ -12,8 +22,8 @@ export class Header extends Component {
 				<h3>Senior software engineer enthusiast about programming and learning new technologies. </h3>
 				<Networking networks={this.props.resume.networks}></Networking>
 				<ul className="HeaderOptions">
-					<li><HeaderToggle name="ABOUT" selected="true"></HeaderToggle></li>
-					<li><HeaderToggle name="EXPERIENCE" selected="false"></HeaderToggle></li>
+					<li onClick={this.setPanel.bind(this, 'About')}><HeaderToggle name="ABOUT" selected={this.state.visiblePanel === 'About'?'true':'false'} ></HeaderToggle></li>
+					<li onClick={this.setPanel.bind(this, 'Experience')}><HeaderToggle name="EXPERIENCE" selected={this.state.visiblePanel === 'Experience'?'true':'false'} ></HeaderToggle></li>
 				</ul>
 			</header>
 		);

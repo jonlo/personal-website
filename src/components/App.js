@@ -10,22 +10,20 @@ export class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { imageFile: '' };
-    this.handler = this.handler.bind(this)
-    this.imageViewer = React.createRef();
-    console.log(resume.experience);
+    this.state = { visiblePanel: 'About' };
+    this.setPanel = this.setPanel.bind(this)
   }
 
-  handler(imageFile) {
-    this.imageViewer.current.setImage(imageFile);
+  setPanel(panel) {
+    this.setState({ visiblePanel: panel });
   }
 
   render() {
     return (
       <div className="App">
-        <Header resume={resume}></Header>
-        <About resume={resume}></About>
-        <Experience experience={resume.experience}></Experience>
+        <Header resume={resume} setPanel={this.setPanel}></Header>
+        <About visible={this.state.visiblePanel === 'About' ? true : false} resume={resume} ></About>
+        <Experience visible={this.state.visiblePanel === 'Experience' ? true : false} experience={resume.experience} ></Experience>
 
       </div >
     );
