@@ -38,6 +38,16 @@
 			"icon": ""
 		},
 		{
+			"name": "Virtual reality",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Augmented reality",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
 			"name": "C#",
 			"level": "Expert",
 			"icon": ""
@@ -78,11 +88,6 @@
 			"icon": ""
 		},
 		{
-			"name": "Gitlab",
-			"level": "Expert",
-			"icon": ""
-		},
-		{
 			"name": "Gitlab CI",
 			"level": "Intermediate",
 			"icon": ""
@@ -115,7 +120,7 @@
 				"Nodejs backend development (express, strapi, socket.IO ...)",
 				"Apps containerization using docker technologies",
 				"JAVA backend development (maven..)",
-				"Virtual reality technologies",
+				"Virtual and augmented reality technologies",
 				"Continuous integration under Gitlab CI",
 				"Deploy under azure technologies ( app service, vm ...)"
 			]
