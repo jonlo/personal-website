@@ -1,19 +1,19 @@
 {
-	"networks":[
+	"networks": [
 		{
-			"name":"gihtub",
-			"url":"https://github.com/jonlo",
-			"icon":"fa-brands fa-github"
+			"name": "gihtub",
+			"url": "https://github.com/jonlo",
+			"icon": "fa-brands fa-github"
 		},
 		{
-			"name":"linkedin",
-			"url":"https://www.linkedin.com/in/jonldg/",
-			"icon":"fa-brands fa-linkedin"
+			"name": "linkedin",
+			"url": "https://www.linkedin.com/in/jonldg/",
+			"icon": "fa-brands fa-linkedin"
 		},
 		{
-			"name":"stack overflow",
-			"url":"https://stackoverflow.com/users/460453/jonloo",
-			"icon":"fa-brands fa-stack-overflow"
+			"name": "stack overflow",
+			"url": "https://stackoverflow.com/users/460453/jonloo",
+			"icon": "fa-brands fa-stack-overflow"
 		}
 	],
 	"skills": [
@@ -43,6 +43,56 @@
 			"icon": ""
 		},
 		{
+			"name": "Html",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Css",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "NPM",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "WebSockets",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "React",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "Webpack",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "Git",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Gitlab",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "Gitlab CI",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
+			"name": "Jest/Mocha",
+			"level": "Intermediate",
+			"icon": ""
+		},
+		{
 			"name": "Unity3d",
 			"level": "Expert",
 			"icon": ""
@@ -53,7 +103,7 @@
 			"icon": ""
 		}
 	],
-	"experience":[
+	"experience": [
 		{
 			"company": "Tecnalia Research and innovation",
 			"position": "Senior software engineer",

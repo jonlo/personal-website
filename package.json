@@ -15,7 +15,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
+    "start": "cross-env PUBLIC_URL=http://localhost:3006/ react-scripts start",
     "build": "react-scripts build",
     "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "gh-pages": "^4.0.0",
     "husky": "^8.0.0"
   }
