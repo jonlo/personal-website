@@ -2,10 +2,14 @@ import './App.css';
 import React, { Component } from 'react';
 import { Header } from './header';
 import { About } from './about';
-
 import { Experience } from './experience';
-
 import resume from '../data/resume.json';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-246059601-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
+
+
 export class App extends Component {
 
   constructor(props) {
