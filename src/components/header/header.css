@@ -1,0 +1,31 @@
+.Header {
+	display: flex;
+	flex-direction: column;
+}
+
+
+
+.profile_pic {
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	margin: 10px;
+	box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+}
+
+.HeaderOptions {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 5px;
+	margin: 0;
+	justify-content: left;
+
+	/* margin: 10px; */
+}
+
+.HeaderOptions li {
+	padding: 1rem;
+
+}

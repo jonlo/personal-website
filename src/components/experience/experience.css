@@ -1,0 +1,78 @@
+.Experience {
+  display: flex;
+  flex-direction: column;
+  top: 0;
+}
+
+.Experience-list {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  /* margin: 10px; */
+}
+
+.Experience-list li {
+  font-size: calc(5px + 2vmin);
+  width: fit-content;
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: rgb(63, 63, 63);
+  font-weight: 600;
+  width: 500px;
+  margin : 1rem;
+  box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+}
+
+.experience-li:nth-child(even) {
+  transform:translateX(110%);
+}
+
+.experience-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.Experience h3 {
+  font-weight: 900;
+  font-style: black;
+  font-size: 1.75rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.Experience h4 {
+  font-weight: 400;
+  font-style: black;
+  font-size: 1.25rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.Experience h5 {
+  font-weight: 400;
+  font-style: black;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 25px;
+
+}
+
+.Task-list li{
+  font-weight: 400;
+  font-style: black;
+  font-size: 1rem;
+  padding: 5px;
+  margin:5px;
+  width: 300px;
+  box-shadow:none;
+}

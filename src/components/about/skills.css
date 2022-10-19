@@ -1,0 +1,29 @@
+.Skills {
+	display: flex;
+	flex-direction: column;
+	max-width: 1000px;
+}
+
+.Skills ul{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	padding: 0px;
+	margin:0px;
+	justify-content: left;
+} 
+
+.Skills li{
+	font-size: calc(5px + 2vmin);
+	width:fit-content;
+	background-color: white;
+	margin-right: 1rem;
+	padding:1rem;
+	border-radius: 1rem;
+	color:rgb(63, 63, 63);
+	font-weight: 600;
+	margin-bottom: 20px;
+	box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+ }
+
