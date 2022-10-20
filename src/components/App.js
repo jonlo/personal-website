@@ -21,7 +21,6 @@ export class App extends Component {
           <Header resume={resume} ></Header>
           <About resume={resume} ></About>
           <Experience experience={resume.experience} ></Experience>
-
         </div >
       </Provider>
     );
