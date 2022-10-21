@@ -24,13 +24,15 @@
   border-radius: 1rem;
   color: rgb(63, 63, 63);
   font-weight: 600;
-  width: 500px;
-  margin : 1rem;
-  box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
+  width: 50%;
+  max-width: 500px;
+  margin: 1rem;
+  box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px,
+    rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
 }
 
 .experience-li:nth-child(even) {
-  transform:translateX(110%);
+  transform: translateX(80%);
 }
 
 .experience-header {
@@ -64,15 +66,35 @@
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 25px;
-
 }
 
-.Task-list li{
+.Task-list li {
   font-weight: 400;
   font-style: black;
   font-size: 1rem;
   padding: 5px;
-  margin:5px;
-  width: 300px;
-  box-shadow:none;
+  margin: 5px;
+  width: 100%;
+  box-shadow: none;
+}
+
+@media only screen and (max-device-width: 640px) {
+  .experience-li:nth-child(even) {
+    transform: none;
+  }
+  
+  .Experience-list li {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  .Task-list li {
+    font-size: 0.8rem;
+    padding: 2px;
+    margin: 2px;
+    width: 100%;
+    }
 }

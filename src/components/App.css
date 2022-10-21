@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
 html {
   font-size: 1rem;
@@ -23,48 +23,17 @@ body {
   /* padding: 20px; */
 }
 
-label {
-  font-size: 1.5rem;
-  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,900;1,200;1,400&display=swap');
-  color: rgb(53, 50, 65);
-  padding: 10px;
-  font-size: calc(1px + 2vmin);
-}
-
-input {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: rgb(53, 50, 65);
-  padding: 10px;
-  font-size: calc(1px + 2vmin);
-}
-
-.input-div {
-  padding: 20px;
-}
-
-.image-viewer {
-  min-width: 500px;
-  min-height: 500px;
-  display: inline-block;
-  position: relative;
-  align-items: center;
-}
-
-#loadedImage {
-  top: 0;
-  left: 0;
-  min-width: 500px;
-  min-height: 500px;
-  max-width: 700px;
-  max-height: 700px;
-  position: absolute;
-  object-fit: contain;
-}
-
-#predictionCanvas {
-  position: relative;
-  z-index: 20;
+@media only screen and (max-device-width: 640px) {
+  body {
+   
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* padding: 20px; */
+  }
 }
 
 h1 {
@@ -90,4 +59,18 @@ h3 {
   line-height: 1.14;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+@media only screen and (max-device-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
 }

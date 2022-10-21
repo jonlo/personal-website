@@ -11,3 +11,11 @@
 	line-height: calc(1ex / 0.32);
 	hyphens: auto;
 }
+
+@media only screen and (max-device-width: 640px) {
+	.About {
+		font-size: 1rem;
+		padding: 0.5rem;
+	}
+  }
+  
