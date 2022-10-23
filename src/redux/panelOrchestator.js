@@ -6,16 +6,13 @@ export const panelOrchestator = createSlice({
 		value: 'About',
 	},
 	reducers: {
-		showAbout: state => {
-			state.value = 'About';
-		},
-		showExperience: state => {
-			state.value = 'Experience';
-		},
+		showHeaderPanel:(state, action) => {
+			state.value = action.payload
+		}
 	}
 })
 
 // Action creators are generated for each case reducer function
-export const { showAbout, showExperience } = panelOrchestator.actions
+export const { showHeaderPanel } = panelOrchestator.actions
 
 export default panelOrchestator.reducer

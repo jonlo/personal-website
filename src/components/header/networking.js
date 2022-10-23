@@ -19,5 +19,13 @@ export class Networking extends Component {
 
 	goToUrl(url) {
 		window.open(url, '_blank').focus();
+		switch (key) {
+			case value:
+				
+				break;
+		
+			default:
+				break;
+		}
 	}
 }

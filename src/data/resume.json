@@ -176,5 +176,14 @@
 				"Web development C# & asp .NET"
 			]
 		}
+	],
+	"projects": [
+		{
+			"name": "PY-web-image-scraper-classifier",
+			"url": "https://github.com/jonlo/py-web-image-scraper-classifier",
+			"image": "py-scrap-classify.jpg",
+			"description": "As python is one of the vehicular languages in artificial intelligence concerns and it's incredible how AI and ML are improving day by day, I wanted to start learning about this subject.\n\nFor that reasons, I built a little pet project where I'm scrapping images from any website in order to classify them with tensorflow.\nIt's built on FastApi to expose a rest api for an easier management, and it's fully dockerized to deploy it anywhere (and not having to fight with CUDA drivers).\n\nI think it could be useful to create image datasets or just analize websites to get contextual information about them.",
+			"technologies":["Python","FastApi","Tensorflow","Docker"]
+		}
 	]
 }
