@@ -20,9 +20,11 @@ export class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header resume={resume} ></Header>
-          <About resume={resume} ></About>
-          <Experience experience={resume.experience} ></Experience>
-          <Projects projects={resume.projects} ></Projects>
+          <div className="center-panel">
+            <About resume={resume} ></About>
+            <Experience experience={resume.experience} ></Experience>
+            <Projects projects={resume.projects} ></Projects>
+          </div>
         </div >
       </Provider>
     );

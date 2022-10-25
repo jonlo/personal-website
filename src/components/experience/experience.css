@@ -1,8 +1,4 @@
-.Experience {
-  display: flex;
-  flex-direction: column;
-  top: 0;
-}
+
 
 .Experience-list {
   list-style: none;
