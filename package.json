@@ -21,7 +21,7 @@
     "start": "cross-env PUBLIC_URL=http://localhost:3006/ react-scripts start",
     "build": "react-scripts build",
     "build-localhost": "PUBLIC_URL=/ react-scripts build",
-    "build:render": "PUBLIC_URL=https://jon-personal-site.onrender.com react-scripts build",
+    "build:render": "PUBLIC_URL=https://jon-ldg.onrender.com react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install"
