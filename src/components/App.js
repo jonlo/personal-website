@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Header } from './header/header';
 import { About } from './about/about';
 import { Experience } from './experience/experience';
+import { Projects } from './projects/projects';
 import resume from '../data/resume.json';
 import ReactGA from 'react-ga';
 import store from '../redux/store';
@@ -19,8 +20,11 @@ export class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header resume={resume} ></Header>
-          <About resume={resume} ></About>
-          <Experience experience={resume.experience} ></Experience>
+          <div className="center-panel">
+            <About resume={resume} ></About>
+            <Experience experience={resume.experience} ></Experience>
+            <Projects projects={resume.projects} ></Projects>
+          </div>
         </div >
       </Provider>
     );
