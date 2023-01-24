@@ -6,17 +6,26 @@
 		{
 			"name": "gihtub",
 			"url": "https://github.com/jonlo",
-			"icon": "fa-brands fa-github"
+			"icon": "fa-brands fa-github",
+			"alt": "github"
 		},
 		{
 			"name": "linkedin",
 			"url": "https://www.linkedin.com/in/jonldg/",
-			"icon": "fa-brands fa-linkedin"
+			"icon": "fa-brands fa-linkedin",
+			"alt": "linkedin"
 		},
 		{
 			"name": "stack overflow",
 			"url": "https://stackoverflow.com/users/460453/jonloo",
-			"icon": "fa-brands fa-stack-overflow"
+			"icon": "fa-brands fa-stack-overflow",
+			"alt": "stack overflow"
+		},
+		{
+			"name": "email",
+			"url": "mailto:hello@jonlo.dev",
+			"icon": "fa fa-envelope",
+			"alt": "Say hi!"
 		}
 	],
 	"skills": [
@@ -183,28 +192,53 @@
 			"url": "https://github.com/jonlo/ifcConverter-web",
 			"image": "ifc-convert.gif",
 			"description": "I made a wrapper around Ifc Open shell, a library that allows you to convert IFC files to other formats (dae, obj, stl, etc) using different options.\n\nIt's built on React, Nodejs, three.js and Ifcopenshell.\n\nThe backend can be deployed on his own, which can be very useful not only for the web (where there are very good solutions such as ifc.js) but also for unity or unreal applications where plugins for this type of task are really expensive.\n\nThe front allows you to upload and preview your Ifc in a webgl canvas before downloading it.\n\nIt's fully dockerized(into three different containers) and deployed in AWS using pm2 to manage the nodejs process, allowing you to work in cluster mode for better perfomance.\n\n",
-			"technologies":["React","Ifcopenshell","Nodejs","three.js","pm2","aws","Docker"]
+			"technologies": [
+				"React",
+				"Ifcopenshell",
+				"Nodejs",
+				"three.js",
+				"pm2",
+				"aws",
+				"Docker"
+			]
 		},
 		{
 			"name": "PY-web-image-scraper-classifier",
 			"url": "https://github.com/jonlo/py-web-image-scraper-classifier",
 			"image": "py-scrap-classify.jpg",
 			"description": "As python is one of the vehicular languages in artificial intelligence concerns and it's incredible how AI and ML are improving day by day, I wanted to start learning about this subject.\n\nFor that reasons, I built a little pet project where I'm scrapping images from any website in order to classify them with tensorflow.\nIt's built on FastApi to expose a rest api for an easier management, and it's fully dockerized to deploy it anywhere (and not having to fight with CUDA drivers).\n\nI think it could be useful to create image datasets or just analize websites to get contextual information about them.",
-			"technologies":["Python","FastApi","Tensorflow","Docker"]
+			"technologies": [
+				"Python",
+				"FastApi",
+				"Tensorflow",
+				"Docker"
+			]
 		},
 		{
 			"name": "WebXR Light designer",
 			"url": "https://www.youtube.com/watch?v=OfrV-B07CI8&ab_channel=B.LuxS.A.",
 			"image": "light.png",
 			"description": "A light designer built for a client who wanted to digitalize his comercialization pipelines.\n\nThe backend system was built with nodejs and a postgresql database.\n\nThe frontend was built using webgl (Three.js) technologies.\n\nJavaScript language was used across backend and frontend.\n\nIt allowed any customer to create a light design and get the components and prices of all the accesories and send orders to our client.",
-			"technologies":["JavaScript","Nodejs","Html","css","Docker","three.js","Postgresql"]
+			"technologies": [
+				"JavaScript",
+				"Nodejs",
+				"Html",
+				"css",
+				"Docker",
+				"three.js",
+				"Postgresql"
+			]
 		},
 		{
 			"name": "Firefighter training system",
 			"url": "https://www.youtube.com/watch?v=GqbZc-BseDM&ab_channel=LudusGlobal",
 			"image": "fire.png",
 			"description": "This project was built on Unity3d, with virtual reality and multiplier cappabilites (via more vr headsets or an instructor view point).\n\nWe where a team of 5 developers where I was the lead developer and engineer manager at the same time.\n\nApart from developing differentt tools, I had to distribute the task among the team.\n\nWe where really hard in this project and allowed us to get a financing round and keep working on our startup.",
-			"technologies":["Unity3d","scrum","Virtual reality"]
+			"technologies": [
+				"Unity3d",
+				"scrum",
+				"Virtual reality"
+			]
 		}
 	]
 }

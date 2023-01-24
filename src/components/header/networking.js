@@ -8,7 +8,7 @@ export class Networking extends Component {
 				<ul>
 					{this.props.networks.map((network, index) => {
 						let icon = network.icon + ' fa-2x';
-						return <li key={index} className={icon} onClick={this.goToUrl.bind(this, network.url)}></li>;
+						return <li key={index} className={icon} onClick={this.goToUrl.bind(this, network.url)} alt={network}></li>;
 					}
 					)}
 				</ul>
