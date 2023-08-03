@@ -31,3 +31,24 @@
 	border-radius: 1rem;
 	box-shadow: inset rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
 }
+
+
+@media only screen and (max-device-width: 640px) {
+	.Networking ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		list-style: none;
+		padding: 5px;
+		margin: 0;
+		margin-bottom: 5px;
+		justify-content: space-between;
+	
+	}
+	
+	.Networking li {
+		padding:1rem;
+	}
+	
+
+}

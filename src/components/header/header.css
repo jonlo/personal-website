@@ -27,3 +27,16 @@
 	padding: 1rem;
 
 }
+
+@media only screen and (max-device-width: 640px) {
+	header{
+		align-items: center;
+	}
+	.HeaderOptions li {
+		padding: 0.4rem;
+	}
+	.HeaderOptions {
+		padding: 0;
+		justify-content: space-between;
+	}
+}
