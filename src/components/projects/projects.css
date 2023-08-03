@@ -83,14 +83,21 @@
     transform: none;
   }
 
+  .projects img {
+    border-radius: 0.5rem;
+  }
+
   .projects-list li {
-    padding: 0;
+    padding: 0.5rem ;
     border-radius: 0.5rem;
     width: 100%;
     margin: 0;
+    margin-bottom: 2rem;
   }
   .projects h3 {
     font-size: 1.25rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
 
   .projects h4 {
