@@ -1,12 +1,9 @@
-
-
 .Experience-list {
   list-style: none;
   padding: 1rem;
   margin: 0;
   display: flex;
   justify-content: left;
-  display: flex;
   flex-direction: column;
   /* margin: 10px; */
 }
@@ -75,22 +72,56 @@
 }
 
 @media only screen and (max-device-width: 640px) {
+  .Experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
   .experience-li:nth-child(even) {
     transform: none;
   }
-  
-  .Experience-list li {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    width: 100%;
-    margin: 0.5rem;
-  }
 
+  .Experience-list li {
+    border-radius: 0.5rem;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0px;
+    width: 100%;
+  }
+.Task-list{
+  padding-bottom: 10px;
+}
   .Task-list li {
     font-size: 0.8rem;
     padding: 2px;
-    margin: 2px;
-    width: 100%;
-    }
+    margin: 0;
+    width: 95%;
+  }
+
+  .Experience h3 {
+    font-size: 1.25rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+
+  .Experience h4 {
+    font-weight: 400;
+    font-style: black;
+    font-size: 0.75rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+
+  .Experience h5 {
+    font-weight: 400;
+    font-style: black;
+    font-size: 0.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 18px;
+  }
 }
