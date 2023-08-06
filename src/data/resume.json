@@ -1,7 +1,7 @@
 {
 	"name": "Jon Lopez de Guereña",
 	"headLine": "Senior software engineer enthusiast about programming and learning new technologies.",
-	"about": "I am enthusiast about programming and learning new technologies. I am a generalistic software engineer who has worked with many technologies and programming languages. From mobile devices (IOS,xamarin), stand-alone developments (unity3d) to web technologies (nodejs, java, three js, webpack, maven....) i have work in many projects with different tech stacks. I am a team player & detail-oriented with strong object oriented programming knowledge and I like to apply clean code principles to my developments.",
+	"about": "I am enthusiast about programming and learning new technologies. I am a generalistic software engineer who has worked with many technologies and programming languages. From mobile devices (IOS,xamarin), stand-alone developments (unity3d) to web technologies (nodejs, java, three js, webpack, maven....) I have work in many projects with different tech stacks. I am a team player & detail-oriented with strong object oriented programming knowledge and I like to apply clean code principles to my developments.",
 	"networks": [
 		{
 			"name": "gihtub",
@@ -31,6 +31,11 @@
 	"skills": [
 		{
 			"name": "JavaScript",
+			"level": "Expert",
+			"icon": ""
+		},
+		{
+			"name": "TypeScript",
 			"level": "Expert",
 			"icon": ""
 		},
@@ -186,6 +191,7 @@
 			]
 		}
 	],
+	"projectsExperience": "I have work in many projects, from web applications, to serious games. Here are a few of them:",
 	"projects": [
 		{
 			"name": "Ifc-web-converter",
@@ -233,7 +239,7 @@
 			"name": "Firefighter training system",
 			"url": "https://www.youtube.com/watch?v=GqbZc-BseDM&ab_channel=LudusGlobal",
 			"image": "fire.png",
-			"description": "This project was built on Unity3d, with virtual reality and multiplier cappabilites (via more vr headsets or an instructor view point).\n\nWe where a team of 5 developers where I was the lead developer and engineer manager at the same time.\n\nApart from developing differentt tools, I had to distribute the task among the team.\n\nWe where really hard in this project and allowed us to get a financing round and keep working on our startup.",
+			"description": "This project was built on Unity3d, with virtual reality and multiplier cappabilites (via more vr headsets or an instructor view point).\n\nWe where a team of 5 developers where I was the lead developer and engineer manager at the same time.\n\nApart from developing differentt tools, I had to distribute the task among the team.\n\nWe worked really hard in this project and allowed us to get a financing round and keep working on our startup.",
 			"technologies": [
 				"Unity3d",
 				"scrum",

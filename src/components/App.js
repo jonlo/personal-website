@@ -23,7 +23,7 @@ export class App extends Component {
           <div className="center-panel">
             <About resume={resume} ></About>
             <Experience experience={resume.experience} ></Experience>
-            <Projects projects={resume.projects} ></Projects>
+            <Projects resume={resume} ></Projects>
           </div>
         </div >
       </Provider>

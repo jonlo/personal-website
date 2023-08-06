@@ -33,33 +33,6 @@
   flex-direction: row;
 }
 
-.Experience h3 {
-  font-weight: 900;
-  font-style: black;
-  font-size: 1.75rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 10px;
-}
-
-.Experience h4 {
-  font-weight: 400;
-  font-style: black;
-  font-size: 1.25rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-right: 15px;
-  margin-left: 10px;
-}
-
-.Experience h5 {
-  font-weight: 400;
-  font-style: black;
-  font-size: 1rem;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  line-height: 25px;
-}
 
 .Task-list li {
   font-weight: 400;
@@ -87,12 +60,12 @@
     border-radius: 0.5rem;
     margin: 0;
     margin-bottom: 2rem;
-    padding: 0px;
+    padding: 0.5rem;
     width: 100%;
   }
-.Task-list{
-  padding-bottom: 10px;
-}
+  .Task-list {
+    padding-bottom: 10px;
+  }
   .Task-list li {
     font-size: 0.8rem;
     padding: 2px;
@@ -100,29 +73,5 @@
     width: 95%;
   }
 
-  .Experience h3 {
-    font-size: 1.25rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-  }
 
-  .Experience h4 {
-    font-weight: 400;
-    font-style: black;
-    font-size: 0.75rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 15px;
-    margin-left: 10px;
-  }
-
-  .Experience h5 {
-    font-weight: 400;
-    font-style: black;
-    font-size: 0.5rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    line-height: 18px;
-  }
 }

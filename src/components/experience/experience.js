@@ -6,7 +6,7 @@ export function Experience(props) {
 	const visiblePanel = useSelector(state => state.panel.value)
 	if (visiblePanel === 'Experience') {
 		return (
-			<div className="Experience" >
+			<div className="Experience subMenu" >
 				<ul className='Experience-list'>
 					{props.experience.map((experience, index) => {
 						return <li className="experience-li" key={index}>

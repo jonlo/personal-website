@@ -47,11 +47,48 @@ h3 {
   margin-bottom: 5px;
 }
 
+.mainDescription {
+  font-weight: 300;
+  text-align: justify;
+  font-size: 1.5rem;
+  width: 100%;
+  font-size-adjust: 0.5;
+  line-height: calc(1ex / 0.32);
+  hyphens: auto;
+}
+
 .center-panel {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   max-width: 980px;
+}
+
+.subMenu h3 {
+  font-weight: 900;
+  font-style: black;
+  font-size: 1.75rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.subMenu h4 {
+  font-weight: 400;
+  font-style: black;
+  font-size: 1.25rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  margin-left: 10px;
+}
+
+.subMenu h5 {
+  font-weight: 400;
+  font-style: black;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 25px;
 }
 
 @media only screen and (max-device-width: 640px) {
@@ -76,8 +113,26 @@ h3 {
   h3 {
     font-size: 1rem;
   }
+
+  .subMenu h3 {
+    font-size: 1.25rem;
+  }
+
+  .subMenu h4 {
+    font-size: 0.75rem;
+  }
+
+  .subMenu h5 {
+    font-size: 0.5rem;
+    line-height: 18px;
+  }
+
   .center-panel {
     padding: 0;
+  }
 
+  .mainDescription {
+    font-size: 1rem;
+    padding: 0;
   }
 }

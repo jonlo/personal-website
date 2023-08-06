@@ -9,7 +9,7 @@ export function About(props) {
 	if (visiblePanel === 'About') {
 		return (
 			<div className="About">
-				<p>{props.resume.about}</p>
+				<p className='mainDescription'>{props.resume.about}</p>
 				<Skills skills={props.resume.skills} ></Skills>
 			</div>
 
