@@ -21,13 +21,13 @@
 }
 
 .Networking li:hover {
-	background-color: white;
+	background-color: var(--itemBackgroundColor);
 	border-radius: 1rem;
 	box-shadow: rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
 }
 
 .Networking li:active {
-	background-color: white;
+	background-color: var(--itemBackgroundColor);
 	border-radius: 1rem;
 	box-shadow: inset rgb(63 63 63/ 4%) 0px 1.51px 5.3px, rgb(63 63 63/ 5%) 0px 3.03px 4.54px;
 }

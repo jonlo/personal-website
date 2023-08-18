@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
+:root{
+  --backgroundColor : rgb(250, 247, 243);
+  --itemBackgroundColor : rgb(255, 255, 255);
+  --textColor : rgb(63, 63, 63);
+
+}
+
 html {
   font-size: 1rem;
 }
@@ -7,8 +14,8 @@ html {
 body {
   /* background-color: #686de0; */
   font-family: "Source Serif Pro", "Times New Roman", serif;
-  background-color: rgb(250, 247, 243);
-  color: rgb(63, 63, 63);
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
   display: flex;
   flex-direction: column;
   align-items: center;

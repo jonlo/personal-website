@@ -1,0 +1,41 @@
+.darkModeToggle{
+    position: absolute;
+    right: clamp(5px, 5vw,25px);  
+    top: clamp(5px, 5vw, 25px);
+    --buttonWidth: clamp(25px, 2vw, 300px);
+    --itemWidth: calc(var(--buttonWidth) * 2);
+}
+
+input.toggle-round {
+  display: none;
+}
+input.toggle-round + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+input.toggle-round + label {
+  padding: 1px;
+  width:  var(--itemWidth);
+  height: var(--buttonWidth);
+  background-color: #ddd;
+  border-radius: var(--buttonWidth);
+  border: 1px solid #ccc;
+}
+input.toggle-round + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: var(--buttonWidth);
+  height: var(--buttonWidth);
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 0 2px 3px #888;
+  transition: margin 0.5s;
+}
+input.toggle-round:checked + label {
+  background-color: black;
+}
+input.toggle-round:checked + label:after {
+  margin-left: var(--buttonWidth);
+}
