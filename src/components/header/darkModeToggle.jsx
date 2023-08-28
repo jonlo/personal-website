@@ -1,38 +1,8 @@
 import "./darkModeToggle.css";
-import React, { useState,useEffect } from "react";
+import { useDarkMode } from "./hooks/useDarkMode";
 
-export function DarkModeToggle(props) {
-  const [darkModeOn, setDarkModeOn] = useState(props.darkModeOn);
-
-  const setDarkMode = () => {
-    const r = document.querySelector(":root");
-    r.style.setProperty("--backgroundColor", "rgb(63, 63, 63)");
-    r.style.setProperty("--textColor", "rgb(250, 247, 243)");
-    r.style.setProperty("--itemBackgroundColor", "rgb(0, 0, 0)");
-  };
-
-  const setWhiteMode = () => {
-    const r = document.querySelector(":root");
-    r.style.setProperty("--backgroundColor", "rgb(250, 247, 243)");
-    r.style.setProperty("--textColor", "rgb(63, 63, 63)");
-    r.style.setProperty("--itemBackgroundColor", "rgb(255, 255, 255)");
-  };
-
-  const toggleDarkMode = () => {
-    if (darkModeOn) {
-      setDarkModeOn(false);
-      setWhiteMode();
-    } else {
-      setDarkModeOn(true);
-      setDarkMode();
-    }
-  };
-
-  useEffect(() => {
-    if(props.darkModeOn){
-      setDarkMode();
-    }
-  }, [props.darkModeOn]);
+export const DarkModeToggle = (props) => {
+  const [theme, toggleTheme] = useDarkMode(props.darkModeOn);
 
   return (
     <div className="darkModeToggle" data-selected={props.darkModeOn}>
@@ -40,10 +10,10 @@ export function DarkModeToggle(props) {
         id="cb_id"
         className="toggle-round"
         type="checkbox"
-        onChange={toggleDarkMode}
-        checked={darkModeOn}
+        onChange={toggleTheme}
+        checked={theme === "dark"}
       ></input>
       <label htmlFor="cb_id"></label>
     </div>
   );
-}
+};

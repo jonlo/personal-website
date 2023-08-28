@@ -1,13 +1,9 @@
-import './headerToggle.css';
-import React, { Component } from 'react';
+import "./headerToggle.css";
 
-export class HeaderToggle extends Component {
-
-	render() {
-		return (
-			<div className="HeaderToggle" data-selected={this.props.selected}>
-				<h2>{this.props.name}</h2>
-			</div>
-		);
-	}
-}
+export const HeaderToggle = (props) => {
+  return (
+    <div className="HeaderToggle" data-selected={props.selected}>
+      <h2>{props.name}</h2>
+    </div>
+  );
+};
