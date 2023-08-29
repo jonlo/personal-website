@@ -1,13 +1,14 @@
 import "./projects.css";
-import { useSelector } from "react-redux";
+import { PanelContext } from '../PanelContext';
+import { useContext } from 'react';
 
 export const Projects = (props) => {
-  const visiblePanel = useSelector((state) => state.panel.value);
+  const { state } = useContext(PanelContext);
   const goToUrl = (url) => {
     window.open(url, "_blank").focus();
   };
 
-  if (visiblePanel === "Projects") {
+  if (state.visiblePanel === "Projects") {
     return (
       <div className="projects subMenu">
         <p className="mainDescription">{props.resume.projectsExperience}</p>

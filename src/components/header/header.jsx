@@ -1,13 +1,12 @@
 import "./header.css";
 import { HeaderToggle } from "./headerToggle";
 import { DarkModeToggle } from "./darkModeToggle";
-import { useSelector, useDispatch } from "react-redux";
-import { showHeaderPanel } from "../../redux/panelOrchestator";
 import { Networking } from "./networking";
+import { useContext } from 'react';
+import { PanelContext, actionTypes } from '../PanelContext';
 
 export const Header = (props) => {
-  const visiblePanel = useSelector((state) => state.panel.value);
-  const dispatch = useDispatch();
+  const { state, showHeaderPanel } = useContext(PanelContext);
   let darkModeOn =
     window.matchMedia &&
     window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -22,22 +21,22 @@ export const Header = (props) => {
       <h3>{props.resume.headLine} </h3>
       <Networking networks={props.resume.networks}></Networking>
       <ul className="HeaderOptions">
-        <li onClick={() => dispatch(showHeaderPanel("About"))}>
+        <li onClick={() => showHeaderPanel({ type: actionTypes.SHOW_ABOUT })}>
           <HeaderToggle
             name="ABOUT"
-            selected={visiblePanel === "About" ? "true" : "false"}
+            selected={state.visiblePanel === "About" ? "true" : "false"}
           ></HeaderToggle>
         </li>
-        <li onClick={() => dispatch(showHeaderPanel("Experience"))}>
+        <li onClick={() => showHeaderPanel({ type: actionTypes.SHOW_EXPERIENCE })}>
           <HeaderToggle
             name="EXPERIENCE"
-            selected={visiblePanel === "Experience" ? "true" : "false"}
+            selected={state.visiblePanel === "Experience" ? "true" : "false"}
           ></HeaderToggle>
         </li>
-        <li onClick={() => dispatch(showHeaderPanel("Projects"))}>
+        <li onClick={() => showHeaderPanel({ type: actionTypes.SHOW_PROJECTS })}>
           <HeaderToggle
             name="PROJECTS"
-            selected={visiblePanel === "Projects" ? "true" : "false"}
+            selected={state.visiblePanel === "Projects" ? "true" : "false"}
           ></HeaderToggle>
         </li>
       </ul>

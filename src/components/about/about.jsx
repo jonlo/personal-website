@@ -1,11 +1,12 @@
 import './about.css';
 import { Skills } from './skills';
-import { useSelector } from 'react-redux'
+import { PanelContext } from '../PanelContext';
+import { useContext } from 'react';
 
 export const About = (props) =>  {
-	const visiblePanel = useSelector(state => state.panel.value)
+	const { state } = useContext(PanelContext);
 
-	if (visiblePanel === 'About') {
+	if (state.visiblePanel === 'About') {
 		return (
 			<div className="About">
 				<p className='mainDescription'>{props.resume.about}</p>

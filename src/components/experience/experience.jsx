@@ -1,9 +1,11 @@
 import "./experience.css";
-import { useSelector } from "react-redux";
+import { PanelContext } from '../PanelContext';
+import { useContext } from 'react';
+
 
 export const Experience = (props) => {
-  const visiblePanel = useSelector((state) => state.panel.value);
-  if (visiblePanel === "Experience") {
+  const { state } = useContext(PanelContext);
+  if (state.visiblePanel === "Experience") {
     return (
       <div className="Experience subMenu">
         <ul className="Experience-list">
