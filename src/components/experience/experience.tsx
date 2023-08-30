@@ -1,9 +1,18 @@
 import "./experience.css";
-import { PanelContext } from '../PanelContext';
-import { useContext } from 'react';
+import { PanelContext } from "../PanelContext";
+import { useContext } from "react";
 
+type ExperienceProps = {
+  experience: {
+    position: string;
+    company: string;
+    from: string;
+    to: string;
+    tasks: string[];
+  }[];
+};
 
-export const Experience = (props) => {
+export const Experience = (props: ExperienceProps) => {
   const { state } = useContext(PanelContext);
   if (state.visiblePanel === "Experience") {
     return (

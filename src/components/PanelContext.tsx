@@ -12,7 +12,15 @@ export const actionTypes = {
   SHOW_PROJECTS: "SHOW_PROJECTS",
 };
 
-export const reducer = (state, action) => {
+type Action = {
+  type: string;
+};
+
+type State = {
+  visiblePanel: string;
+};
+
+export const reducer = (state: State, action: Action) => {
   if (action.type === actionTypes.SHOW_ABOUT) {
     return {
       visiblePanel: "About",
