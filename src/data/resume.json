@@ -201,7 +201,7 @@
 		{
 			"name": "Ifc-web-converter",
 			"url": "https://github.com/jonlo/ifcConverter-web",
-			"image": "ifc-convert.gif",
+			"image": "ifcConverter.webp",
 			"description": "I made a wrapper around Ifc Open shell, a library that allows you to convert IFC files to other formats (dae, obj, stl, etc) using different options.\n\nIt's built on React, Nodejs, three.js and Ifcopenshell.\n\nThe backend can be deployed on his own, which can be very useful not only for the web (where there are very good solutions such as ifc.js) but also for unity or unreal applications where plugins for this type of task are really expensive.\n\nThe front allows you to upload and preview your Ifc in a webgl canvas before downloading it.\n\nIt's fully dockerized(into three different containers) and deployed in AWS using pm2 to manage the nodejs process, allowing you to work in cluster mode for better perfomance.\n\n",
 			"technologies": [
 				"React",
