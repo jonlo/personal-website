@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import avatarImg from './assets/avatar.jpeg'
+import logoAppfire from './assets/appfire_logo.jpeg'
+import logoTecnalia from './assets/tecnalia_research__innovation_logo.jpeg'
+import logoLudus from './assets/ludus_hse_training_with_vr_logo.jpeg'
+import logoIdeateca from './assets/ideateca_logo.jpeg'
 import './App.css'
 
 const data = {
@@ -15,7 +19,7 @@ const data = {
   experience: [
     {
       company: 'Appfire',
-      logoDomain: 'appfire.com',
+      logo: logoAppfire,
       role: 'Senior Software Engineer',
       period: 'Feb 2024 — Present',
       location: 'Bilbao',
@@ -29,7 +33,7 @@ const data = {
     },
     {
       company: 'TECNALIA Research & Innovation',
-      logoDomain: 'tecnalia.com',
+      logo: logoTecnalia,
       role: 'Senior Software Engineer',
       period: 'May 2019 — Feb 2024',
       location: 'Derio',
@@ -43,7 +47,7 @@ const data = {
     },
     {
       company: 'LUDUS — VR for Industry & Emergency Services',
-      logoDomain: null,
+      logo: logoLudus,
       role: 'Co-founder & Lead Developer',
       period: 'Aug 2011 — Jul 2020',
       location: 'Bilbao',
@@ -57,7 +61,7 @@ const data = {
     },
     {
       company: 'IDEATECA',
-      logoDomain: 'ideateca.es',
+      logo: logoIdeateca,
       role: 'iOS Developer',
       period: 'Jan 2010 — Jun 2011',
       location: 'Bilbao',
@@ -68,7 +72,7 @@ const data = {
     },
     {
       company: 'Campusdeportivo',
-      logoDomain: null,
+      logo: null,
       role: '.NET Developer',
       period: '2006 — 2007',
       location: 'Bilbao',
@@ -100,21 +104,10 @@ const data = {
   languages: ['Basque', 'Spanish', 'English'],
 }
 
-function CompanyLogo({ domain, company }: { domain: string | null; company: string }) {
-  const [failed, setFailed] = useState(false)
+function CompanyLogo({ logo, company }: { logo: string | null; company: string }) {
   const initials = company.split(/[\s&—]/)[0].slice(0, 2).toUpperCase()
-
-  if (!domain || failed) {
-    return <div className="company-initials">{initials}</div>
-  }
-  return (
-    <img
-      className="company-logo"
-      src={`https://logo.clearbit.com/${domain}`}
-      alt={company}
-      onError={() => setFailed(true)}
-    />
-  )
+  if (!logo) return <div className="company-initials">{initials}</div>
+  return <img className="company-logo" src={logo} alt={company} />
 }
 
 function useInView(threshold = 0.12) {
@@ -205,7 +198,7 @@ function App() {
             {data.experience.map((job) => (
               <div className="card" key={job.company + job.period}>
                 <div className="card-head">
-                  <CompanyLogo domain={job.logoDomain} company={job.company} />
+                  <CompanyLogo logo={job.logo} company={job.company} />
                   <div className="card-head-text">
                     <h3 className="card-title">{job.role}</h3>
                     <span className="card-subtitle">{job.company} · {job.location}</span>
