@@ -3,78 +3,98 @@ import './App.css'
 
 const data = {
   name: 'Jon Lopez de Guereña',
-  title: 'Senior Software Engineer',
+  title: 'Software Engineer',
+  subtitle: 'AI · Backend & Distributed Systems · Atlassian Ecosystem · Cloud & Architecture',
   location: 'Bilbao, Spain',
   email: 'jon.ldg85@gmail.com',
   linkedin: 'linkedin.com/in/jonldg',
-  github: 'github.com/jonldg',
+  website: 'jonlo.dev',
   summary:
-    'Senior software engineer specialized in backend systems and cloud applications. Passionate about building scalable, maintainable software and solving complex technical challenges. Experienced across the full development lifecycle from architecture to deployment.',
+    'Senior software engineer specialized in backend systems and cloud applications, focused on building scalable, reliable, and maintainable software. I work primarily on the Atlassian ecosystem (Forge & Connect for Confluence), designing backend services, implementing complex data migrations, and contributing to production systems that support workflow automation and document management at scale. I care deeply about pragmatic architecture, clean code, and engineering practices that allow teams to move fast while maintaining long-term system integrity.',
   experience: [
     {
       company: 'Appfire',
       role: 'Senior Software Engineer',
-      period: '2021 — Present',
-      location: 'Bilbao, Spain (Remote)',
+      period: 'Feb 2024 — Present',
+      location: 'Bilbao',
       bullets: [
-        'Designing and building backend services and cloud-native applications at scale.',
-        'Collaborating with cross-functional teams across multiple time zones.',
-        'Contributing to architecture decisions, code reviews, and technical strategy.',
+        'Building scalable cloud applications for the Atlassian ecosystem (Forge & Connect), extending Confluence functionality.',
+        'Architected backend systems with Node.js, TypeScript and REST APIs following hexagonal architecture and clean code principles.',
+        'Designed and implemented complex data migrations and performance improvements for production systems.',
+        'Implemented automated testing strategies — unit, integration and E2E — using Jest and Playwright.',
+        'Adopted AI-assisted development workflows (Cursor, ChatGPT) to support spec-driven development and improve engineering productivity.',
+      ],
+    },
+    {
+      company: 'TECNALIA Research & Innovation',
+      role: 'Senior Software Engineer',
+      period: 'May 2019 — Feb 2024',
+      location: 'Derio',
+      bullets: [
+        'Designed and developed WebXR applications using React and Three.js to deliver immersive VR/AR experiences in the browser.',
+        'Built SPAs with React and modern JavaScript, focusing on maintainable front-end architectures.',
+        'Developed backend services and APIs using Node.js, Express and Java; implemented real-time features with Socket.IO.',
+        'Containerized applications with Docker, deployed microservices on Kubernetes (AKS), and ran CI/CD pipelines on GitLab CI and Azure.',
+        'Mentored junior developers and worked in Agile/Scrum environments on research-driven software projects.',
+      ],
+    },
+    {
+      company: 'LUDUS — VR for Industry & Emergency Services',
+      role: 'Co-founder & Lead Developer',
+      period: 'Aug 2011 — Jul 2020',
+      location: 'Bilbao',
+      bullets: [
+        'Co-founded the company and led a team of up to 8 engineers building VR training applications for emergency response and industrial safety.',
+        'Designed the core Unity3D (C#) framework architecture enabling reusable components across projects.',
+        'Developed backend services and APIs with Node.js/Express, and operated cloud infrastructure on AWS.',
+        'Developed mobile games and apps for iOS and Android using Objective-C, Xamarin and Unity3D.',
+        'Taught iOS mobile development at Cebanc and game development at IFPS Tartanga.',
+      ],
+    },
+    {
+      company: 'IDEATECA',
+      role: 'iOS Developer',
+      period: 'Jan 2010 — Jun 2011',
+      location: 'Bilbao',
+      bullets: [
+        'Contributed to iBasket — a basketball game that reached 15M+ downloads worldwide and ranked Top 10 in the App Store across multiple countries.',
+        'Developed gameplay features for iPhone and iPad using Objective-C and the iOS SDK.',
+      ],
+    },
+    {
+      company: 'Campusdeportivo',
+      role: '.NET Developer',
+      period: '2006 — 2007',
+      location: 'Bilbao',
+      bullets: [
+        'Web development with C# and ASP.NET.',
       ],
     },
   ],
-  education: [
-    {
-      school: 'Universidad de Deusto',
-      degree: 'Computer Engineering',
-      period: '2003 — 2010',
-    },
-    {
-      school: 'Universidad de Deusto',
-      degree: 'Postgraduate Studies',
-      period: '2009 — 2012',
-    },
-  ],
   skills: [
-    'TypeScript', 'JavaScript', 'Python', 'Java',
-    'React', 'Node.js', 'FastAPI',
-    'AWS', 'Docker', 'Kubernetes',
-    'REST APIs', 'GraphQL',
-    'PostgreSQL', 'MongoDB',
-    'TensorFlow.js', 'Unity3D',
-    'Git', 'CI/CD',
+    'TypeScript', 'Node.js', 'Express.js', 'React',
+    'REST APIs', 'Hexagonal Architecture', 'Clean Code',
+    'AWS (Lambda · S3 · DynamoDB)', 'Docker', 'Kubernetes',
+    'CI/CD', 'GitLab CI', 'Azure',
+    'Jest', 'Playwright', 'Cucumber / Gherkin', 'TestCafe',
+    'WebXR', 'Three.js', 'Socket.IO',
+    'Unity3D', 'C#', 'Objective-C',
+    'Atlassian Forge', 'Systems Design', 'Cloud-Native Architecture',
+  ],
+  education: [
+    { school: 'Universidad de Deusto', degree: 'Computer Engineering', period: '2003 — 2010' },
+    { school: 'Oulun yliopisto', degree: 'Computer Engineering (Exchange)', period: '2009 — 2010' },
+    { school: 'Inedi Design School', degree: 'Master in Graphic Design', period: '2011 — 2012' },
   ],
   certifications: [
     { name: 'HackerRank Problem Solving', date: 'Nov 2022' },
     { name: 'HackerRank REST API Certificate', date: 'Nov 2022' },
     { name: 'Learning 3D Graphics on the Web with Three.js', issuer: 'LinkedIn Learning', date: 'May 2019' },
   ],
-  projects: [
-    {
-      name: 'Image Identifier',
-      description: 'Browser-based image classification using React and TensorFlow.js, running inference entirely on the client side.',
-      tags: ['React', 'TensorFlow.js'],
-    },
-    {
-      name: 'Python Web Scraper',
-      description: 'Intelligent scraping pipeline with FastAPI backend, BeautifulSoup parsing, and TensorFlow-powered data extraction.',
-      tags: ['Python', 'FastAPI', 'BeautifulSoup', 'TensorFlow'],
-    },
-    {
-      name: 'Fronton Simulator',
-      description: 'Realistic physics simulation of the traditional Basque pelota game built in Unity3D.',
-      tags: ['Unity3D', 'C#', 'Game Dev'],
-    },
-    {
-      name: 'Egolike Platform',
-      description: 'Social platform with lead iOS developer role — architected the mobile experience from the ground up.',
-      tags: ['iOS', 'Swift', 'Mobile'],
-    },
-  ],
-  languages: ['English', 'Spanish', 'Basque'],
+  languages: ['Basque', 'Spanish', 'English'],
 }
 
-function useInView(threshold = 0.15) {
+function useInView(threshold = 0.12) {
   const ref = useRef<HTMLElement>(null)
   const [visible, setVisible] = useState(false)
   useEffect(() => {
@@ -118,7 +138,6 @@ function App() {
 
   return (
     <div className="page">
-      {/* Ambient background blobs */}
       <div className="blob blob-1" />
       <div className="blob blob-2" />
 
@@ -129,6 +148,7 @@ function App() {
             <p className="hero-pre">Hello, I'm</p>
             <h1 className="hero-name">{data.name}</h1>
             <p className="hero-title">{data.title}</p>
+            <p className="hero-subtitle">{data.subtitle}</p>
             <p className="hero-location">
               <span className="dot" /> {data.location}
             </p>
@@ -138,6 +158,9 @@ function App() {
               </button>
               <a className="link-chip" href={`https://${data.linkedin}`} target="_blank" rel="noreferrer">
                 LinkedIn
+              </a>
+              <a className="link-chip" href={`https://${data.website}`} target="_blank" rel="noreferrer">
+                {data.website}
               </a>
             </div>
           </div>
@@ -155,39 +178,26 @@ function App() {
 
         {/* Experience */}
         <Section title="Experience" delay={50}>
-          {data.experience.map((job) => (
-            <div className="card" key={job.company + job.role}>
-              <div className="card-head">
-                <div>
-                  <h3 className="card-title">{job.role}</h3>
-                  <span className="card-subtitle">{job.company} · {job.location}</span>
+          <div className="experience-list">
+            {data.experience.map((job) => (
+              <div className="card" key={job.company + job.period}>
+                <div className="card-head">
+                  <div>
+                    <h3 className="card-title">{job.role}</h3>
+                    <span className="card-subtitle">{job.company} · {job.location}</span>
+                  </div>
+                  <span className="card-period">{job.period}</span>
                 </div>
-                <span className="card-period">{job.period}</span>
-              </div>
-              <ul className="bullet-list">
-                {job.bullets.map((b) => <li key={b}>{b}</li>)}
-              </ul>
-            </div>
-          ))}
-        </Section>
-
-        {/* Projects */}
-        <Section title="Projects" delay={100}>
-          <div className="project-grid">
-            {data.projects.map((p) => (
-              <div className="project-card" key={p.name}>
-                <h3 className="project-name">{p.name}</h3>
-                <p className="project-desc">{p.description}</p>
-                <div className="tag-row">
-                  {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
-                </div>
+                <ul className="bullet-list">
+                  {job.bullets.map((b) => <li key={b}>{b}</li>)}
+                </ul>
               </div>
             ))}
           </div>
         </Section>
 
         {/* Skills */}
-        <Section title="Skills" delay={150}>
+        <Section title="Skills" delay={100}>
           <div className="skill-grid">
             {data.skills.map((s) => (
               <span className="skill-chip" key={s}>{s}</span>
@@ -197,7 +207,7 @@ function App() {
 
         {/* Two-col: Education + Certs */}
         <div className="two-col">
-          <Section title="Education" delay={200}>
+          <Section title="Education" delay={150}>
             {data.education.map((e) => (
               <div className="edu-item" key={e.school + e.period}>
                 <div>
@@ -209,7 +219,7 @@ function App() {
             ))}
           </Section>
 
-          <Section title="Certifications" delay={250}>
+          <Section title="Certifications" delay={200}>
             {data.certifications.map((c) => (
               <div className="cert-item" key={c.name}>
                 <p className="cert-name">{c.name}</p>
@@ -220,7 +230,7 @@ function App() {
         </div>
 
         {/* Languages */}
-        <Section title="Languages" delay={300}>
+        <Section title="Languages" delay={250}>
           <div className="lang-row">
             {data.languages.map((l) => (
               <div className="lang-chip" key={l}>{l}</div>

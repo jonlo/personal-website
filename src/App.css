@@ -114,6 +114,14 @@ body {
   color: var(--accent2);
   margin-bottom: 10px;
 }
+.hero-subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .06em;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 .hero-location {
   font-size: 13px;
   color: var(--text-dim);
@@ -224,6 +232,11 @@ body {
 }
 
 /* ── Cards (Experience) ───────────────────────────────────── */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
