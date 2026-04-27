@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import avatarImg from './assets/avatar.jpeg'
 import './App.css'
 
 const data = {
@@ -14,6 +15,7 @@ const data = {
   experience: [
     {
       company: 'Appfire',
+      logoDomain: 'appfire.com',
       role: 'Senior Software Engineer',
       period: 'Feb 2024 — Present',
       location: 'Bilbao',
@@ -27,6 +29,7 @@ const data = {
     },
     {
       company: 'TECNALIA Research & Innovation',
+      logoDomain: 'tecnalia.com',
       role: 'Senior Software Engineer',
       period: 'May 2019 — Feb 2024',
       location: 'Derio',
@@ -40,6 +43,7 @@ const data = {
     },
     {
       company: 'LUDUS — VR for Industry & Emergency Services',
+      logoDomain: null,
       role: 'Co-founder & Lead Developer',
       period: 'Aug 2011 — Jul 2020',
       location: 'Bilbao',
@@ -53,6 +57,7 @@ const data = {
     },
     {
       company: 'IDEATECA',
+      logoDomain: 'ideateca.es',
       role: 'iOS Developer',
       period: 'Jan 2010 — Jun 2011',
       location: 'Bilbao',
@@ -63,6 +68,7 @@ const data = {
     },
     {
       company: 'Campusdeportivo',
+      logoDomain: null,
       role: '.NET Developer',
       period: '2006 — 2007',
       location: 'Bilbao',
@@ -92,6 +98,23 @@ const data = {
     { name: 'Learning 3D Graphics on the Web with Three.js', issuer: 'LinkedIn Learning', date: 'May 2019' },
   ],
   languages: ['Basque', 'Spanish', 'English'],
+}
+
+function CompanyLogo({ domain, company }: { domain: string | null; company: string }) {
+  const [failed, setFailed] = useState(false)
+  const initials = company.split(/[\s&—]/)[0].slice(0, 2).toUpperCase()
+
+  if (!domain || failed) {
+    return <div className="company-initials">{initials}</div>
+  }
+  return (
+    <img
+      className="company-logo"
+      src={`https://logo.clearbit.com/${domain}`}
+      alt={company}
+      onError={() => setFailed(true)}
+    />
+  )
 }
 
 function useInView(threshold = 0.12) {
@@ -166,7 +189,7 @@ function App() {
           </div>
           <div className="hero-avatar">
             <div className="avatar-ring">
-              <div className="avatar-initials">JL</div>
+              <img className="avatar-photo" src={avatarImg} alt="Jon Lopez de Guereña" />
             </div>
           </div>
         </header>
@@ -182,7 +205,8 @@ function App() {
             {data.experience.map((job) => (
               <div className="card" key={job.company + job.period}>
                 <div className="card-head">
-                  <div>
+                  <CompanyLogo domain={job.logoDomain} company={job.company} />
+                  <div className="card-head-text">
                     <h3 className="card-title">{job.role}</h3>
                     <span className="card-subtitle">{job.company} · {job.location}</span>
                   </div>
