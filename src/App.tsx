@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Mail } from 'lucide-react'
 import avatarImg from './assets/avatar.jpeg'
 import logoAppfire from './assets/appfire_logo.jpeg'
 import logoTecnalia from './assets/tecnalia_research__innovation_logo.jpeg'
@@ -9,18 +10,18 @@ import './App.css'
 const data = {
   name: 'Jon Lopez de Guereña',
   title: 'Software Engineer',
-  subtitle: 'AI · Backend & Distributed Systems · Atlassian Ecosystem · Cloud & Architecture',
+  subtitle: 'AI · Cloud & Architecture · Backend & Distributed Systems · Atlassian Ecosystem',
   location: 'Bilbao, Spain',
   email: 'jon.ldg85@gmail.com',
   linkedin: 'linkedin.com/in/jonldg',
   website: 'jonlo.dev',
   summary:
-    'Senior software engineer specialized in backend systems and cloud applications, focused on building scalable, reliable, and maintainable software. I work primarily on the Atlassian ecosystem (Forge & Connect for Confluence), designing backend services, implementing complex data migrations, and contributing to production systems that support workflow automation and document management at scale. I care deeply about pragmatic architecture, clean code, and engineering practices that allow teams to move fast while maintaining long-term system integrity.',
+    'Senior software engineer focused on backend systems and cloud architecture, currently building scalable Atlassian ecosystem apps (Forge & Connect for Confluence). Passionate about pragmatic architecture, clean code, and engineering practices that let teams move fast without sacrificing long-term integrity.',
   experience: [
     {
       company: 'Appfire',
       logo: logoAppfire,
-      role: 'Senior Software Engineer',
+      role: 'Senior Software Architect',
       period: 'Feb 2024 — Present',
       location: 'Bilbao',
       bullets: [
@@ -101,7 +102,109 @@ const data = {
     { name: 'HackerRank REST API Certificate', date: 'Nov 2022' },
     { name: 'Learning 3D Graphics on the Web with Three.js', issuer: 'LinkedIn Learning', date: 'May 2019' },
   ],
+  projects: [
+    {
+      name: 'iBasket',
+      description: 'Basketball game that hit 15M+ downloads worldwide and ranked Top 10 in the App Store across multiple countries.',
+      tags: ['iOS', 'Objective-C', 'Game Dev'],
+      highlight: true,
+    },
+    {
+      name: 'Image Identifier',
+      description: 'Browser-based image classification running TensorFlow.js inference entirely on the client — no backend required.',
+      tags: ['React', 'TensorFlow.js'],
+      highlight: false,
+    },
+    {
+      name: 'Python Web Scraper',
+      description: 'Intelligent scraping pipeline with a FastAPI backend, BeautifulSoup parsing, and TensorFlow-powered data extraction.',
+      tags: ['Python', 'FastAPI', 'BeautifulSoup', 'TensorFlow'],
+      highlight: false,
+    },
+    {
+      name: 'Fronton Simulator',
+      description: 'Realistic physics simulation of the traditional Basque pelota game — built from scratch in Unity3D.',
+      tags: ['Unity3D', 'C#', 'Physics'],
+      highlight: false,
+    },
+  ],
+  teaching: [
+    { course: 'iOS Mobile App Development', institution: 'Cebanc', period: '2013 — 2016' },
+    { course: 'Game Development with Unity3D', institution: 'IFPS Tartanga', period: '2014 — 2016' },
+  ],
   languages: ['Basque', 'Spanish', 'English'],
+}
+
+function ConstellationField() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
+
+    const resize = () => {
+      canvas.width = window.innerWidth
+      canvas.height = canvas.parentElement?.offsetHeight ?? window.innerHeight
+    }
+    resize()
+
+    const NODE_COUNT = 90
+    const MAX_DIST = 160
+
+    const nodes = Array.from({ length: NODE_COUNT }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.25,
+      vy: (Math.random() - 0.5) * 0.25,
+      r: Math.random() * 1.4 + 0.8,
+    }))
+
+    let raf: number
+    const draw = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+      for (const n of nodes) {
+        n.x += n.vx
+        n.y += n.vy
+        if (n.x < 0 || n.x > canvas.width) n.vx *= -1
+        if (n.y < 0 || n.y > canvas.height) n.vy *= -1
+      }
+
+      ctx.lineWidth = 0.6
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x
+          const dy = nodes[i].y - nodes[j].y
+          const dist = Math.sqrt(dx * dx + dy * dy)
+          if (dist < MAX_DIST) {
+            const alpha = (1 - dist / MAX_DIST) * 0.28
+            ctx.beginPath()
+            ctx.moveTo(nodes[i].x, nodes[i].y)
+            ctx.lineTo(nodes[j].x, nodes[j].y)
+            ctx.strokeStyle = `rgba(160,185,255,${alpha})`
+            ctx.stroke()
+          }
+        }
+      }
+
+      for (const n of nodes) {
+        ctx.beginPath()
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2)
+        ctx.fillStyle = 'rgba(200,215,255,0.75)'
+        ctx.fill()
+      }
+
+      raf = requestAnimationFrame(draw)
+    }
+    draw()
+
+    window.addEventListener('resize', resize)
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('resize', resize) }
+  }, [])
+
+  return <canvas ref={canvasRef} className="hero-canvas" />
 }
 
 function CompanyLogo({ logo, company }: { logo: string | null; company: string }) {
@@ -154,38 +257,38 @@ function App() {
 
   return (
     <div className="page">
-      <div className="blob blob-1" />
-      <div className="blob blob-2" />
+
+      {/* Full-viewport hero */}
+      <header className="hero">
+        <ConstellationField />
+        <div className="hero-inner">
+          <div className="avatar-ring">
+            <img className="avatar-photo" src={avatarImg} alt="Jon Lopez de Guereña" />
+          </div>
+          <p className="hero-pre">Hello, I'm</p>
+          <h1 className="hero-name">{data.name}</h1>
+          <p className="hero-title">{data.title}</p>
+          <p className="hero-subtitle">{data.subtitle}</p>
+          <p className="hero-location">
+            <span className="dot" /> {data.location}
+          </p>
+          <div className="hero-links">
+            <button className="icon-btn" onClick={copyEmail} title={copied ? 'Copied!' : data.email}>
+              <Mail size={20} />
+            </button>
+            <a className="icon-btn" href={`https://${data.linkedin}`} target="_blank" rel="noreferrer" title="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452H17.21v-5.569c0-1.327-.024-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.989V9h3.101v1.561h.044c.432-.816 1.487-1.676 3.059-1.676 3.27 0 3.874 2.152 3.874 4.948v6.619zM5.337 7.433a1.8 1.8 0 1 1 0-3.601 1.8 1.8 0 0 1 0 3.601zm1.601 13.019H3.734V9h3.204v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div className="hero-scroll">
+          <span className="hero-scroll-line" />
+        </div>
+      </header>
 
       <div className="container">
-        {/* Hero */}
-        <header className="hero">
-          <div className="hero-text">
-            <p className="hero-pre">Hello, I'm</p>
-            <h1 className="hero-name">{data.name}</h1>
-            <p className="hero-title">{data.title}</p>
-            <p className="hero-subtitle">{data.subtitle}</p>
-            <p className="hero-location">
-              <span className="dot" /> {data.location}
-            </p>
-            <div className="hero-links">
-              <button className="link-chip" onClick={copyEmail}>
-                {copied ? '✓ Copied!' : data.email}
-              </button>
-              <a className="link-chip" href={`https://${data.linkedin}`} target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a className="link-chip" href={`https://${data.website}`} target="_blank" rel="noreferrer">
-                {data.website}
-              </a>
-            </div>
-          </div>
-          <div className="hero-avatar">
-            <div className="avatar-ring">
-              <img className="avatar-photo" src={avatarImg} alt="Jon Lopez de Guereña" />
-            </div>
-          </div>
-        </header>
 
         {/* Summary */}
         <Section title="About">
@@ -213,6 +316,21 @@ function App() {
           </div>
         </Section>
 
+        {/* Projects */}
+        <Section title="Projects" delay={75}>
+          <div className="project-grid">
+            {data.projects.map((p) => (
+              <div className={`project-card ${p.highlight ? 'project-card--highlight' : ''}`} key={p.name}>
+                <h3 className="project-name">{p.name}</h3>
+                <p className="project-desc">{p.description}</p>
+                <div className="tag-row">
+                  {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
         {/* Skills */}
         <Section title="Skills" delay={100}>
           <div className="skill-grid">
@@ -222,29 +340,20 @@ function App() {
           </div>
         </Section>
 
-        {/* Two-col: Education + Certs */}
-        <div className="two-col">
-          <Section title="Education" delay={150}>
-            {data.education.map((e) => (
-              <div className="edu-item" key={e.school + e.period}>
+        {/* Teaching */}
+        <Section title="Teaching" delay={200}>
+          <div className="teaching-list">
+            {data.teaching.map((t) => (
+              <div className="teaching-item" key={t.course}>
                 <div>
-                  <h3 className="edu-degree">{e.degree}</h3>
-                  <span className="edu-school">{e.school}</span>
+                  <h3 className="teaching-course">{t.course}</h3>
+                  <span className="teaching-institution">{t.institution}</span>
                 </div>
-                <span className="edu-period">{e.period}</span>
+                <span className="edu-period">{t.period}</span>
               </div>
             ))}
-          </Section>
-
-          <Section title="Certifications" delay={200}>
-            {data.certifications.map((c) => (
-              <div className="cert-item" key={c.name}>
-                <p className="cert-name">{c.name}</p>
-                <span className="cert-meta">{c.issuer ? `${c.issuer} · ` : ''}{c.date}</span>
-              </div>
-            ))}
-          </Section>
-        </div>
+          </div>
+        </Section>
 
         {/* Languages */}
         <Section title="Languages" delay={250}>
@@ -256,7 +365,7 @@ function App() {
         </Section>
 
         <footer className="footer">
-          <p>Built with React + Vite · {new Date().getFullYear()}</p>
+          <p>{new Date().getFullYear()}</p>
         </footer>
       </div>
     </div>
