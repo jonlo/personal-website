@@ -102,32 +102,6 @@ const data = {
     { name: 'HackerRank REST API Certificate', date: 'Nov 2022' },
     { name: 'Learning 3D Graphics on the Web with Three.js', issuer: 'LinkedIn Learning', date: 'May 2019' },
   ],
-  projects: [
-    {
-      name: 'iBasket',
-      description: 'Basketball game that hit 15M+ downloads worldwide and ranked Top 10 in the App Store across multiple countries.',
-      tags: ['iOS', 'Objective-C', 'Game Dev'],
-      highlight: true,
-    },
-    {
-      name: 'Image Identifier',
-      description: 'Browser-based image classification running TensorFlow.js inference entirely on the client — no backend required.',
-      tags: ['React', 'TensorFlow.js'],
-      highlight: false,
-    },
-    {
-      name: 'Python Web Scraper',
-      description: 'Intelligent scraping pipeline with a FastAPI backend, BeautifulSoup parsing, and TensorFlow-powered data extraction.',
-      tags: ['Python', 'FastAPI', 'BeautifulSoup', 'TensorFlow'],
-      highlight: false,
-    },
-    {
-      name: 'Fronton Simulator',
-      description: 'Realistic physics simulation of the traditional Basque pelota game — built from scratch in Unity3D.',
-      tags: ['Unity3D', 'C#', 'Physics'],
-      highlight: false,
-    },
-  ],
   teaching: [
     { course: 'iOS Mobile App Development', institution: 'Cebanc', period: '2013 — 2016' },
     { course: 'Game Development with Unity3D', institution: 'IFPS Tartanga', period: '2014 — 2016' },
@@ -311,21 +285,6 @@ function App() {
                 <ul className="bullet-list">
                   {job.bullets.map((b) => <li key={b}>{b}</li>)}
                 </ul>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Projects */}
-        <Section title="Projects" delay={75}>
-          <div className="project-grid">
-            {data.projects.map((p) => (
-              <div className={`project-card ${p.highlight ? 'project-card--highlight' : ''}`} key={p.name}>
-                <h3 className="project-name">{p.name}</h3>
-                <p className="project-desc">{p.description}</p>
-                <div className="tag-row">
-                  {p.tags.map((t) => <span className="tag" key={t}>{t}</span>)}
-                </div>
               </div>
             ))}
           </div>
