@@ -16,7 +16,7 @@ const data = {
   linkedin: 'linkedin.com/in/jonldg',
   website: 'jonlo.dev',
   summary:
-    'Senior software engineer focused on backend systems and cloud architecture, currently building scalable Atlassian ecosystem apps (Forge & Connect for Confluence). Passionate about pragmatic architecture, clean code, and engineering practices that let teams move fast without sacrificing long-term integrity.',
+    'Senior software engineer focused on backend systems and cloud architecture, currently building scalable Atlassian ecosystem apps, Forge & Connect. Passionate about AI, pragmatic architecture, clean code, and engineering practices that let teams move fast without sacrificing long-term integrity.',
   experience: [
     {
       company: 'Appfire',
